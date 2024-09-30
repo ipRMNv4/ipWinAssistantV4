@@ -9,6 +9,8 @@ import psutil
 import subprocess
 import notes
 from download import download_file
+from spotify_to_yt import final
+
 def show_news(newsapi, country='in'):
     url = 'https://newsapi.org/v2/top-headlines'
     params = {
@@ -128,11 +130,6 @@ def clean_text(text):
 def main():
     newsapi = os.getenv('NEWS_API_KEY')
 
-    '''
-     open_spotify()
-     pause_playback()
-     resume_playback()
-    '''
     model = genai.GenerativeModel('gemini-pro')
     chat = model.start_chat(history=[])
 
@@ -144,6 +141,9 @@ def main():
 
         elif i == "youtube":
             yt()
+
+        elif i == "transfer playlist":
+            final()
 
         elif i == "open spotify":
             open_spotify()
@@ -173,7 +173,7 @@ def main():
                     break
 
         elif i == "open discord" or i == "open dc":
-            subprocess.Popen(r"PATH TO DISCORD")
+            subprocess.Popen(r"PATH TO DISCORD.EXE")
 
         elif i == "download":
             print("Paste the download link of the file here: ")
