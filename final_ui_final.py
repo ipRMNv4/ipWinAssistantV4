@@ -29,7 +29,7 @@ from main import play_previous
 from main import playback_state
 from main import currently_playing
 import google.generativeai as genai
-genai.configure(api_key='AIzaSyBYkElOybiQw0VyRkr8w-l-PS4-0gzzOoI')
+genai.configure(api_key='YOUR API KEY')
 resultt = playback_state()
 
 class ToolBar(QWidget):
