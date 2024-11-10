@@ -1,0 +1,263 @@
+@import url('//fonts.googleapis.com/css?family=Roboto:500');
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+@keyframes fadein {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+@keyframes fadein2 {
+    0% { opacity: 0.9; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9; }
+}
+
+h1 {
+    font-size: 310px;
+    text-align: center;
+    font-family: fantasy;
+    color: darkslategrey;
+    animation: fadein 5s infinite;
+    margin-bottom: 10px; /* Reduce space below the heading */
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.introduction p {
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 20px;
+    color: grey;
+    max-width: 1300px; /* This controls the maximum width */
+
+    /* Prevent line wrap and keep everything on a single line */
+    white-space: nowrap; /* Ensures text doesn't wrap */
+    overflow: hidden; /* Hides overflowed content */
+    border-right: .15em solid orange; /* Typewriter cursor effect */
+    letter-spacing: .15em; /* Adjust spacing between characters */
+
+    animation:
+            typing 6s steps(100, end), /* Adjust the number of steps based on the text length */
+            blink-caret .75s step-end infinite;
+}
+
+/* Typing effect animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #faf5ef;
+    /*justify-content: center;*/
+
+}
+h2{
+    text-align: center;
+    color: darkslategrey;
+    font-size: 150px;
+}
+
+
+
+p{
+    margin-left: 110px;
+    margin-right: 110px;
+    line-height: 2.5;
+    font-size: 20px;
+    text-align: center;
+    color: grey;
+    
+
+}
+
+.docs{
+    text-align: center;
+}
+
+
+
+.face-button {
+    height: 40px;
+
+
+    display: block; /* Change to block for centering */
+    width: fit-content; /* Adjust width to content */
+    margin: 0 auto; /* Center the button */
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.face-button .icon {
+    margin-right: 6px;
+}
+
+.face-button .face-primary,
+.face-button .face-secondary {
+    display: block;
+    padding: 0 32px;
+    line-height: 40px;
+    transition: margin 0.4s;
+}
+
+.face-button .face-primary {
+    background-color: darkslategrey;
+    color: #faf5ef;
+}
+
+.face-button .face-secondary {
+    background-color: darkslategrey;
+    color: #faf5ef;
+}
+
+.face-button:hover .face-primary {
+    margin-top: -40px;
+}
+
+#heading header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #faf5ef;
+    font-family: fantasy;
+    font-size: 40px;
+    background-color: darkslategrey;
+}
+
+.header-image {
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+.main-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+
+}
+
+.container {
+    width: 600px;
+    padding: 20px;
+}
+
+
+.feature {
+    color: #faf5ef;
+    font-family: fantasy;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #213737;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadein2 2s infinite;
+}
+
+.feature:hover {
+    background-color: black;
+}
+
+.pro-feature {
+    background-color: #1F4036;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+
+.badge {
+    background-color: #444444;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.badge.pro {
+    background-color: #44dfc7;
+}
+
+.badge.plugin {
+    background-color: #4A4A4A;
+}
+
+
+.video-container {
+    width: 1000px;
+    background-color: darkslategrey;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+}
+
+#footing footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #faf5ef;
+    font-family: fantasy;
+    font-size: 40px;
+    background-color: darkslategrey;
+}
+
+.footer-image {
+    height: 50px;
+    margin-right: 10px;
+}
